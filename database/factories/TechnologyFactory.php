@@ -18,20 +18,10 @@ class TechnologyFactory extends Factory
     {
         return [
             'name' => fake()->unique()->randomElement([
-                'Python',
+                'html',
                 'Java',
                 'JavaScript',
-                'PHP',
-                'R',
-                'Swift',
-                'Kotlin',
-                'MATLAB',
-                'Go',
-                'Ruby',
-                'Dart',
-                'Rust',
-                'Scala',
-                'TypeScript'
+                'PHP'
             ]),
             'description' => fake()->paragraph()
         ];

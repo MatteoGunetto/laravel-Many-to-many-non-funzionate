@@ -15,6 +15,6 @@ class TechnologyTableSeeder extends Seeder
      */
     public function run()
     {
-        Technology::factory()->count(14)->create();
+        Technology::factory()->count(4)->create();
     }
 }

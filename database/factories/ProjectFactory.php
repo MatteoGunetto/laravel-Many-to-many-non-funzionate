@@ -19,7 +19,7 @@ class ProjectFactory extends Factory
         return [
             'name' => fake()->company(),
             'description' => fake()->text($maxNbChars = 300),
-            'commit' => fake()->unsignedTinyInteger(0, 30),
+            'commit' => fake()->numberBetween(0, 30),
             'accessible' => fake()->boolean()
         ];
     }
