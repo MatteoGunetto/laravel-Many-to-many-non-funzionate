@@ -10,19 +10,8 @@
             <input type="text" id="name" name="name">
             <label for="description"><strong>Descrizione</strong></label>
             <input type="text" id="description" name="description">
-            <div class="my-3">
-                <label class="form-label me-3"><strong>Visibilità:</strong></label>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" checked name="accessible" value="0" id="public">
-                    <label class="form-check-label" for="public">Pubblico</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="accessible" value="1" id="accessible">
-                    <label class="form-check-label" for="accessible">Privato</label>
-                </div>
-            </div>
 
-            <label for="commit"><strong>Collaboratori</strong></label>
+            <label for="commit"><strong>Commit</strong></label>
             <input type="text" id="commit" name="commit">
             <label class="my-2" for="tipologia"><strong>Tipologia</strong></label>
             <select class="my-2" name="type_id" id="type_id">
