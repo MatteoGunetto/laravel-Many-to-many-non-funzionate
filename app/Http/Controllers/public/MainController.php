@@ -11,5 +11,6 @@ class MainController extends Controller
         $projects = Project::all();
 
         return view('public.index', compact('projects'));
+
     }
 }

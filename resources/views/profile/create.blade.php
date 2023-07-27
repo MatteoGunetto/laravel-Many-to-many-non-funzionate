@@ -1,6 +1,12 @@
 @extends('layouts.app')
 @section('content')
-    <form class="container my-2" method="POST" action="{{ route('store') }}">
+    <form class="container my-2" method="POST"
+    action="{{ route('store') }}"
+    enctype='multipart/form-data'
+
+
+
+    >
         @csrf
         @method('POST')
 
@@ -10,6 +16,8 @@
             <input type="text" id="name" name="name">
             <label for="description"><strong>Descrizione</strong></label>
             <input type="text" id="description" name="description">
+            <label for="main_picture">photo</label>
+            <input type="file" name="main_picture" id="main_picture">
 
             <label for="commit"><strong>Commit</strong></label>
             <input type="text" id="commit" name="commit">

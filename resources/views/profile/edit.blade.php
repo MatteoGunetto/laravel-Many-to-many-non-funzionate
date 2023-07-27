@@ -1,12 +1,16 @@
 @extends('layouts.app')
 @section('content')
-    <form class="container my-2" method="POST" action="{{ route('update', $project->id) }}">
+    <form class="container my-2" method="POST"
+    action="{{ route('update', $project->id) }}"
+    enctype='multipart/form-data'>
         @csrf
         @method('put')
         <div class="d-flex flex-column align-items-center">
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" value="{{ $project->name }}">
             <label for="description">Descrizione</label>
+            <label for="main_picture">photo</label>
+            <input type="file" name="main_picture" id="main_picture">
             <input type="text" id="description" name="description" value="{{ $project->description }}">
             <label for="commit">Commit</label>
             <input type="text" id="commit" name="commit" value="{{ $project->commit }}">

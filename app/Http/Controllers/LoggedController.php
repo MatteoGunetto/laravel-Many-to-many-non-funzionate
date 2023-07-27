@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Project;
 use App\Models\Type;
 use App\Models\Technology;
@@ -10,6 +11,7 @@ class LoggedController extends Controller
     {
         $projects = Project::findOrFail($id);
         return view('profile.show', compact('projects'));
+
     }
     public function create()
     {
@@ -27,10 +29,14 @@ class LoggedController extends Controller
         //     'accessible' => 'required',
         //     'commit' => 'required',
         //     'type_id' => 'required'
+        //     'main_picture' => 'nullable|max:2048'
         // ]);
         $project = Project::create($data);
         $project->technologies()->attach($data['technology']);
+        $img_path = Storage::put('images', $data['main_picture']);
+
         return redirect()->route('show', $project->id);
+
     }
     public function edit($id)
     {
@@ -51,6 +57,7 @@ class LoggedController extends Controller
         //     'accessible' => 'required',
         //     'commit' => 'required',
         //     'type_id' => 'required'
+        //     'user_picture' => 'nullable|max:2048'
         // ]);
         $project = Project::findOrFail($id);
         $project->technologies()->sync($data['technology']);

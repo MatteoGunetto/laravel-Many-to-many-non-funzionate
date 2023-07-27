@@ -7,6 +7,9 @@
         <span class="col-2 "><strong>Descrizione:</strong></span>
         <span class=" col-6 fs-5">{{ $projects->description }}</span>
     </div>
+    <div>
+        <img src="{{ asset('storage/images' . $projects->main_picture) }}">
+    </div>
     <div class="row justify-content-between py-4">
         <span class="col-2"><strong>Numero commit:</strong></span>
         <span class="col-6">{{ $projects->commit }}</span>
