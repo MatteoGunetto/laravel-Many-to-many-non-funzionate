@@ -10,7 +10,8 @@ class Project extends Model
         'description',
         'accessible',
         'commit',
-        'type_id'
+        'type_id',
+        'main_picture'
     ];
 
     // Relazione onetomany con Type

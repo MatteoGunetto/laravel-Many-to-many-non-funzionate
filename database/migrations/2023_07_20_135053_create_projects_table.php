@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->boolean('accessible');
             $table->unsignedTinyInteger('commit');
+            $table->string('main_picture')->nullable();
 
             $table->timestamps();
         });
